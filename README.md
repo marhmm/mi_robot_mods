@@ -30,7 +30,7 @@ To shutdown the robot, we have to pull down the power button Pin to GND for abou
 
 Connect like this:
 
-![schematic](img\schematic.png)
+![schematic](img/schematic.png)
 
 
 
@@ -40,15 +40,15 @@ R3 and R4 seem to be important too for reliable startup.
 
 
 
-![esp_board](img\esp_board.png)
+![esp_board](img/esp_board.png)
 
-![esp_board_wrapped](img\esp_board_wrapped.png)
+![esp_board_wrapped](img/esp_board_wrapped.png)
 
 
 
 You can get 3,3V power supply for your ESP at the TPP7 point on the robot board (see picture below). This is the output of the built-in 3,3V voltage regulator. Keep the wires away from the white marked area around the buttons because the top cover is directly pressed on the board in this area.
 
-![Verbau](img\Verbau.png)
+![Verbau](img/Verbau.png)
 
 
 
@@ -60,7 +60,7 @@ You can get 3,3V power supply for your ESP at the TPP7 point on the robot board 
 
 3. ESP should connect to your wifi now (check your wifi router for IP) and you can open its IP in your browser:
 
-   ![website_main](img\website_main.png)
+   ![website_main](img/website_main.png)
 
 4. Press "Shutdown now" Button. ESP LED should light up and robot power button is pressed. (You can also open the url x.x.x.x/shutdown to shutdown directly)
 5. For updating firmware, compile in Arduino IDE (Strg + Alt + S) and upload generated .bin file over "Upload firmware" Button.
