@@ -19,8 +19,10 @@ while 1:
 			if output['battery'] >= 80:
 				print('Shutdown!')
 				subprocess.call(["433Utils/RPi_utils/steuerung", "0"])
-				time.sleep(5)
-				requests.get('http://YYY.YYY.YYY.YYY/shutdown')
+				
+				#time.sleep(5)
+				# shutdown over ESP8266, not needed with auto shutdown
+				#requests.get('http://YYY.YYY.YYY.YYY/shutdown')
 			else:
 				print('Wait, Batt charge only: ', output['battery'])
 

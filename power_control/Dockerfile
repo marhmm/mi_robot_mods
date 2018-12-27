@@ -1,8 +1,5 @@
 ﻿FROM resin/rpi-raspbian:stretch-20181024
 
-MAINTAINER Markus <markus.hamm@hotmail.de>
-
-
 # Batteriestand auslesen
 RUN	apt-get update && apt-get install wget nano	python3 python3-pip
 
