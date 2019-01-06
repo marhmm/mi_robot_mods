@@ -1,11 +1,23 @@
-import json, requests, time, subprocess
+import json, requests, time, subprocess, schedule, time
 from requests.exceptions import ConnectionError
+
+
+def start():
+	print('Turn on!')
+	subprocess.call(["433Utils/RPi_utils/steuerung", "1"])
+
+# ************* CLEANING SCHEDULE ************
+schedule.every().tuesday.at("15:00").do(start)
+schedule.every().friday.at("15:00").do(start)
+# ********************************************
 
 counter=0
 while 1:	
 	time.sleep(60)
+	schedule.run_pending()
 	try:
-		ret=requests.get('http://XXX.XXX.XXX.XXX/api/current_status')
+		# get current state of robot (ENTER YOUR OWN VALETUDO IP)
+		ret=requests.get('http://192.168.178.36/api/current_status')
 		output=json.loads(ret.text)	
 		state=output['state']
 		
