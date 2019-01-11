@@ -39,6 +39,7 @@ while 1:
 				print('Wait, Batt charge only: ', output['battery'])
 
 	except ConnectionError:
+		counter=0
 		pass
 		#print('offline')
 
